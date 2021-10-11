@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- site metas -->
+    <title>Kisan Seva</title>
+    <meta name="keywords" content="kisan">
+    <meta name="description" content="lpuproject">
+    <meta name="author" content="kisanseva">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+  
+    <style>
+        h1 {}
+
+        .todayData {
+            width: 100%;
+            display: table;
+        }
+
+        .desc {
+            text-transform: uppercase;
+        }
+
+        .weather {
+            margin: 80px auto;
+            width: 95%;
+            overflow: scroll;
+            background-image: url(images/weatehr.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            float: none;
+            text-align: center;
+            border-radius: 10px;
+            clear: both;
+            padding: 40px 0px;
+        }
+
+        .todayData>div {
+            border-radius: 10px;
+            height: 200px;
+            width: 45%;
+            margin-left: 33px;
+            float: left;
+            background: rgb(52 75 119 / 53%);
+        }
+
+        .otherData {
+            clear: both;
+        }
+
+        .one img,
+        .two div {
+            width: 45%;
+            height: 160px;
+            margin: 35px 0px 0px 10px;
+            border-radius: 10px;
+            float: left;
+        }
+
+        .one img {
+            width: 40%;
+            padding-left: 10px;
+        }
+
+        .two {
+            color: white;
+            font-size: 19px;
+        }
+
+        .two>div:nth-child(1) p {
+            font-weight: 700;
+            font-size: 17px;
+            letter-spacing: 0.4px;
+            margin-bottom: 10px;
+        }
+
+        .two>div:nth-child(2) p {
+            font-weight: 400;
+            font-size: 17px;
+            letter-spacing: 0.4px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .right {
+            width: 48%;
+            float: right;
+            text-align: center;
+            margin: 30px 0px 0px 1px;
+        }
+
+        .right h3,
+        .right p {
+            color: white;
+        }
+
+        .loader_bg {
+            display: none;
+        }
+
+        .otherData {
+            width: 93%;
+            margin: 59px auto;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+        }
+
+        .otherData div {
+            border-radius: 10px;
+            background: rgb(52 75 119 / 53%);
+            padding: 20px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .otherData div>img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .otherData div h3,
+        .otherData div h4 {
+
+            color: white
+        }
+
+
+        @media screen and (max-width: 700px) {
+            .todayData>div {
+                width: 87%;
+                margin-bottom: 40px
+            }
+
+            .todayData {
+                margin-bottom: 40px
+            }
+        }
+    </style>
+</head>
+<!-- body -->
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <div class="header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col logo_section">
+                    <div class="full">
+                        <div class="center-desk">
+                            <div class="logo">
+                                <a href="index.html"><img src="images/brand.png" width="100px" alt="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                    <div class="location_icon_bottum_tt">
+                        <ul>
+                            <li><img src="icon/loc1.png" />Punjab</li>
+                            <li><img src="icon/email1.png" />kisanseva@gmail.com</li>
+
+                            <li><img src="icon/call1.png" />+91 8004012228</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 location_icon_bottum">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li> <a href="index.html">Home </a> </li>
+                                            <li class="active"> <a href="schemes.html">Government
+                                                    Schemes</a> </li>
+                                            <li> <a href="mandi.html">Mandi Prices</a> </li>
+                                            <li><a href="weather.html" style="color:#52b352">Weather Broadcast</a></li>
+                                            <li><a href="crops.html">Seasonal Crops</a></li>
+                                      
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weather">
+
+        <div class="todayData">
+            <div class="one">
+                <img src="images/sunny.gif" id="weather-icon">
+                <div class="right">
+                    <h3 class="day">Sunday</h3>
+                    <h3 class="desc">cloudy</h3>
+                    <h3 class="c">22 °C</h3>
+                    <h3 class="f">22 °F</h3>
+                </div>
+            </div>
+            <div class="two">
+                <div>
+                    <p>Sunrise : </p>
+                    <p>Sunset : </p>
+                    <p>Humidity : </p>
+                    <p>Pressure : </p>
+                    <p></p>
+                </div>
+                <div>
+                    <p class="sunrise">06:32:29</p>
+                    <p class="sunset">20:45:0</p>
+                    <p class="humidity">40</p>
+                    <p class="pressure">200</p>
+                </div>
+            </div>
+        </div>
+        <div class="otherData">
+
+        </div>
+
+    </div>
+
+    <footr>
+        <div class="footer top_layer ">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="address">
+                            <a href="index.html"> <img src="images/brand.png" alt="logo" /></a>
+                            <p> </p>
+                        </div>
+                    </div>
+                   
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="address">
+                            <h3>To Stay updated</h3>
+                            <input class="form-control" placeholder="Your Email" type="type" name="Your Email">
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12">
+                        <div class="address">
+                            <h3>Contact Us</h3>
+
+                            <ul class="loca">
+                                <li>
+                                    <a href="#"><img src="icon/loc.png" alt="#" /></a> Punjab 
+                                </li>
+                                <li>
+                                    <a href="#"><img src="icon/email.png" alt="#" /></a>kisanseva@gmail.com </li>
+                                <li>
+                                    <a href="#"><img src="icon/call.png" alt="#" /></a>+91 8004012228 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            let long;
+            let lat;
+            // Accessing Geolocation of User
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    // $('.loader_bg').fadeToggle();
+                    long = position.coords.longitude;
+                    lat = position.coords.latitude;
+                    //   const base = `https://api.openweathermap.org/data/2.5/weatherlat=${lat}&lon=${long}&appid=${api}&units=metric`;
+                    const base = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=20ba4f6255d067abc2bd76262a4e4487`;
+                    fetch(base).then((response) => {
+                        return response.json();
+                    })
+                        .then((data) => {
+                            $('.loader_bg').hide();
+                            console.log(data);
+                            const weekData = data.daily;
+                            const temp = data.current.temp;
+                            const { description, icon } = data.current.weather[0];
+                            const sunrise = data.current.sunrise;
+                            const sunset = data.current.sunset;
+                            const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+                            const fheat = (temp.toFixed(2) - 273.15) * (9 / 5) + 32;
+                            // Converting Epoch(Unix) time to GMT
+                            const sunriseGMT = new Date(sunrise * 1000);
+                            const sunsetGMT = new Date(sunset * 1000);
+                            const day = new Date(data.current.dt * 1000 + (data.timezone_offset * 1000));
+                            var weekDay = '';
+                            if (day.getDay() == 0) {
+                                weekDay = 'Sunday';
+                            }
+                            if (day.getDay() == 1) {
+                                weekDay = 'Monday';
+                            }
+                            if (day.getDay() == 2) {
+                                weekDay = 'Tuesday';
+                            }
+                            if (day.getDay() == 3) {
+                                weekDay = 'Wednesday';
+                            }
+                            if (day.getDay() == 4) {
+                                weekDay = 'Thursday';
+                            }
+                            if (day.getDay() == 5) {
+                                weekDay = 'Friday';
+                            }
+                            if (day.getDay() == 6) {
+                                weekDay = 'Saturday';
+                            }
+                            const date = day.getDate() + '/' + day.getMonth() + 1 + '/' + day.getFullYear();
+                            document.querySelector('.humidity').textContent = data.current.humidity;
+                            document.querySelector('.pressure').textContent = data.current.pressure;
+                            document.querySelector('.day').textContent = weekDay;
+                            document.querySelector('.desc').textContent = description;
+                            document.querySelector('.c').textContent = `${temp.toFixed(2) - 273.15} °C`;
+                            document.querySelector('.f').textContent = `${fheat.toFixed(2)} °F`;
+                            document.getElementById('weather-icon').src = iconUrl;
+                            document.querySelector('.sunrise').textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
+                            document.querySelector('.sunset').textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
+                            var div;
+                            var c;
+                            var f;
+                            var descrip = '';
+
+                            for (var i = 1; i < 7; i++) {
+                                const day = new Date(weekData[i].dt * 1000 + (19800 * 1000));
+                                descrip = weekData[i].weather[0].main;
+                                var week = '';
+                                if (day.getDay() == 0) {
+                                    week = 'Sunday';
+                                }
+                                if (day.getDay() == 1) {
+                                    week = 'Monday';
+                                }
+                                if (day.getDay() == 2) {
+                                    week = 'Tuesday';
+                                }
+                                if (day.getDay() == 3) {
+                                    week = 'Wednesday';
+                                }
+                                if (day.getDay() == 4) {
+                                    week = 'Thursday';
+                                }
+                                if (day.getDay() == 5) {
+                                    week = 'Friday';
+                                }
+                                if (day.getDay() == 6) {
+                                    week = 'Saturday';
+                                }
+                                c = weekData[i].temp.min;
+                                f = (c.toFixed(2) - 273.15) * (9 / 5) + 32;
+
+                                div = $('<div/>');
+                                div.append(`<h3>${week} </h3>`);
+                                div.append(`<h4>${descrip} </h4>`)
+                                div.append(`<img src='http://openweathermap.org/img/wn/${weekData[i].weather[0].icon}@2x.png'>`)
+
+                                div.append(`<h3>${(c.toFixed(2) - 273.15).toFixed(2)} °C</h3>`)
+                                div.append(`<h3>${f.toFixed(2)} °F</h3>`)
+
+                                $(".otherData").append(div);
+                            }
+                        });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

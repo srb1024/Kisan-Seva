@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Kisan Seva</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+        
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <style>
+        body {
+            /* background: #152429; */
+            text-align: center;
+        }
+
+        .tab-content {
+            background: #152429;
+        }
+
+        .tab-content:nth-child(1)>img,
+        .tab-content:nth-child(3)>img {
+            width: 600px;
+        }
+   
+.accordion-container{
+  position: relative;
+  width: 95%;
+  height: auto;
+  margin: 10px auto;
+  margin-bottom: 60px;
+}
+.accordion-container > h2{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.set{
+    position: relative;
+    width: 100%;
+    margin-bottom: 13px;
+    height: auto;
+    background-color: #808080;
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+}
+.set > a i{
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active{
+  background-color:#63bb79;
+  color: #fff;
+}
+.content{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display:none;
+  padding: 30px 0px;
+}
+.content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
+}
+
+        @media screen and (max-width: 900px) {
+            .listing {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                border-color: transparent;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .image-inline {
+                /* margin-left: -15px; */
+                width: 350px;
+
+            }
+        }
+
+        .image-inline {
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+
+        table tr {
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #dddddd;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #afadad;
+        }
+
+        table .listing tbody tr td {
+            background: 0 0;
+            border: 1px solid #fff;
+            vertical-align: top;
+        }
+
+        table td,
+        table th {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .highlightTxt {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+            background: white;
+        }
+
+        .agriculture {
+            background-image: url('images/banner.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100% 100%;
+
+        }
+
+        .agriculture>.highlightTxt {
+            margin: 0;
+        }
+
+        .agriculture p {
+            font-size: 20px;
+            color: black;
+            font-weight: 400;
+            line-height: 37px;
+            padding: 20px 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            background: white;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col logo_section">
+                    <div class="full">
+                        <div class="center-desk">
+                            <div class="logo">
+                                <a href="index.html"><img src="images/brand.png" width="100px" alt="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                    <div class="location_icon_bottum_tt">
+                        <ul>
+                            <li><img src="icon/loc1.png" />Punjab</li>
+                            <li><img src="icon/email1.png" />kisanseva@gmail.com</li>
+
+                            <li><img src="icon/call1.png" />+91 8004012228</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 location_icon_bottum">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li > <a href="index.html">Home </a> </li>
+                                            <li class="active"> <a href="schemes.html" style="color:#52b352">Government
+                                                    Schemes</a> </li>
+                                            <li> <a href="mandi.html">Mandi Prices</a> </li>
+                                            <li><a href="weather.html">Weather Broadcast</a></li>
+                                            <li><a href="crops.html">Seasonal Crops</a></li>
+                                       
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="schemes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="projects_select tab-link current" data-tab="tab-1">PMKSY</a>
+        <a class="projects_select tab-link" data-tab="tab-2">PKVY</a>
+        <a class="projects_select tab-link" data-tab="tab-3">PMFBY</a>
+        <a class="projects_select tab-link" data-tab="tab-4">Gramin Yojna</a>
+
+        <div id="tab-1" class="tab-content current">
+            <img src="images/pmksy.jpeg">
+            <h1>Har Khet ko Pani "Prime Minister Krishi Sinchayee Yojana"</h1>
+            <p>
+                Government of India is committed to accord high priority to water conservation and its management. To
+                this effect Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) has been formulated with the vision of
+                extending the coverage of irrigation 'Har Khet ko pani' and improving water use efficiency 'More crop
+                per drop' in a focused manner with end to end solution on source creation, distribution, management,
+                field application and extension activities.</p>
+            <p>
+                The Cabinet Committee on Economic Affairs chaired by Hon’ble Prime Minister has accorded approval of
+                Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) in its meeting held on 1st July, 2015.
+
+                PMKSY has been formulated amalgamating ongoing schemes viz. Accelerated Irrigation Benefit Programme
+                (AIBP) of the Ministry of Water Resources, River Development & Ganga Rejuvenation (MoWR,RD&GR),
+                Integrated Watershed Management Programme (IWMP) of Department of Land Resources (DoLR) and the On Farm
+                Water Management (OFWM) of Department of Agriculture and Cooperation (DAC). PMKSY has been approved for
+                implementation across the country with an outlay of Rs. 50,000 crore in five years. For 2015-16, an
+                outlay of Rs.5300 crore has been made which includes Rs. 1800 crore for DAC; Rs. 1500 crore for DoLR;
+                Rs. 2000 crore for MoWR(Rs. 1000 crore for AIBP; Rs. 1000 crores for PMKSY)
+            </p>
+        </div>
+
+        <div id="tab-2" class="tab-content">
+            <img src="images/CallCenterBanner.jpeg">
+            <h1>Paramparagat Krishi Vikas Yojana</h1>
+            <p>The Paramparagat Krishi Vikas Yojana (PKVY), an initiative to promote organic farming in the country, was
+                launched by the NDA government in 2015.</p>
+            <p>According to the scheme, farmers will be encouraged to form groups or clusters and take to organic
+                farming methods over large areas in the country.</p>
+            <p>The aim is to form 10,000 clusters over the next three years and bring about five lakh acres of
+                agricultural area under organic farming. The government also intends to cover the certification costs
+                and promote organic farming through the use of traditional resources.</p>
+            <p>To avail the scheme, each cluster or group must have 50 farmers willing to take up organic farming under
+                the PKVY and possess a total area of at least 50 acres. Each farmer enrolling in the scheme will be
+                provided INR 20,000 per acre by the government spread over three years time.</p>
+        </div>
+
+        <div id="tab-3" class="tab-content">
+            <br><br><br> <br><br>
+            <h1>Pradhan Mantri Fasal Bima Yojana</h1>
+            <p>Pradhan Mantri Fasal Bima Yojana (PMFBY) is the government sponsored crop insurance scheme that
+                integrates multiple stakeholders on a single platform.</p>
+            <img src="images/pmfby.jpeg">
+            <h3 style="color:white">Objectives:</h3>
+            <p>1. To provide insurance coverage and financial support to the farmers in the event of failure of any of
+                the notified crop as a result of natural calamities, pests & diseases.
+            </p>
+            <p>
+                2. To stabilise the income of farmers to ensure their continuance in farming.</p>
+            <p>3. To encourage farmers to adopt innovative and modern agricultural practices.</p>
+            <p>4. To ensure flow of credit to the agriculture sector.</p>
+        </div>
+        <div id="tab-4" class="tab-content">
+            <br><br><br> <br><br>
+            <p>Create scientific storage capacity with allied facilities in rural areas.
+                To meet the requirements of farmers for storing farm produce, processed farm produce and agricultural
+                inputs.
+                Promotion of grading, standardization and quality control of agricultural produce to improve their
+                marketability.
+                Prevent distress sale immediately after harvest by providing the facility of pledge financing and
+                marketing credit by strengthening agricultural marketing infrastructure in the country.</p><br>
+            <p>The funds are allocated to the states based on 75% weightage of rural housing shortage and 25% weightage
+                of poverty ratio. The housing shortage is as per the official published figures of Registrar General of
+                India based on the 2001 Census.
+
+                A software called "AWAAS Soft" was launched in July 2010 to assist in improved administration of this
+                scheme.</p>
+
+        </div>
+    </div>
+
+    <h1 class="highlightTxt">CREDIT FACILITY FOR FARMERS</h1>
+    <table class="grid listing">
+        <tbody>
+            <tr style="box-sizing: border-box; text-align: center;">
+                <td style="text-align: center; "><strong>S.NO</strong></td>
+                <td style="text-align: center; "><strong>Credit Facility</strong></td>
+                <td style="text-align: center; "><strong>Quantum of Assistance</strong></td>
+            </tr>
+            <tr>
+                <td style="">1</td>
+                <td style="">Interest Assistance<br>Collateral / security-free loan</td>
+                <td style="">Crop loan upto Rs.3 lakhs at 7% rate of interest. This interest rate becomes 4% due to 3%
+                    interest subvention incentives provided to those farmers who repay crop loan on time.<br>No need of
+                    collateral security for farm loan up to Rs 1.6 lakh</td>
+            </tr>
+            <tr>
+                <td style="">2</td>
+                <td style="">Kisan Credit Card</td>
+                <td style="">Farmers can avail crop loan through Kisan Credit Card. Loan /credit limit is fixed on the
+                    basis of crop sown and area under cultivation. Kisan Credit Cards are valid for 3-5 years. Farmers
+                    are also provided risk coverage in the event of accidental death/ disability. Crop coverage loans
+                    are covered under the <a href="/agriculture/agri-insurance/crop-insurance">Crop Insurance</a>
+                    Scheme.</td>
+            </tr>
+            <tr>
+                <td style="">3</td>
+                <td style="">Investment Loan</td>
+                <td style="">Loan facility to the farmers is available for investment purposes in the areas viz.
+                    Irrigation, Agricultural Mechanization, Land Development, Plantation, Horticulture and Post-Harvest
+                    Management</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="agriculture">
+        <h1 class="highlightTxt">AGRICULTURE INFRASTRUCTURE FUND</h1>
+        <p>The Union Cabinet in July 2020 has approved a new pan India Central Sector Scheme called Agriculture
+            Infrastructure Fund. The scheme shall provide a medium - long term debt financing facility for investment in
+            viable projects for post-harvest management Infrastructure and community farming assets through interest
+            subvention and financial support.
+
+            The duration of the Scheme shall be from FY2020 to FY2029 (10 years).</p>
+        <img class="image-inline" src="https://static.vikaspedia.in/mediastorage/image/AIF.jpeg" width="860"
+            height="715">
+    </div>
+    <br><br>
+    <h1 class="highlightTxt">LATEST GOVERNMENT SCHEMES</h1>
+    <div class="accordion-container" id="accContainer">
+
+        <div class="set">
+            <a  href="#accContainer">
+                National Livestock Mission
+                <i class="fa fa-plus"></i>
+            </a>
+            <div class="content">
+                <div style="text-align: justify;">
+                    <div>National Livestock Mission is an initiative of the Ministry of Agriculture and Farmers’
+                        Welfare. The mission, which commenced from 2014-15, has the objective of sustainable development
+                        of the livestock sector.&nbsp;&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div>NABARD is the subsidy channelizing agency under Entrepreneurship Development &amp; Employment
+                        Generation (EDEG) component of National Livestock Mission. This includes:</div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <ul>
+                            <li>Poultry Venture Capital Fund (PVCF)</li>
+                            <li>Integrated Development of Small Ruminants and Rabbit (IDSRR)</li>
+                            <li>Pig Development (PD)</li>
+                            <li>Salvaging and Rearing of Male Buffalo Calves (SRMBC)&nbsp;&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div><strong style="color: #008000;">Who can benefit from the scheme?&nbsp;</strong></div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <ul>
+                            <li>Farmers, Individuals Entrepreneurs, NGOs, Companies, Cooperatives, groups of organized
+                                and unorganized sector which include Self- Help Groups (SHGs) and Joint Liability Groups
+                                (JLGs)</li>
+                        </ul>
+                    </div>
+                    <div></div>
+                    <div><strong style="color: #008000;">Eligible financial institutions&nbsp;</strong></div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <ul>
+                            <li>Commercial Banks</li>
+                            <li>Regional Rural Banks</li>
+                            <li>State Cooperative Banks</li>
+                            <li>State Cooperative Agriculture and Rural Development Banks</li>
+                            <li>Other institutions eligible for refinance from NABARD</li>
+                        </ul>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="set">
+            <a href="#accContainer">
+                Interest Subention Scheme
+                <i class="fa fa-plus"></i>
+            </a>
+            <div class="content">
+                <div style="text-align: justify; ">
+                    <div>The Honourable Finance Minister in his budget speech (para 49) for 2006-07 announced that the
+                        Government had decided to ensure that farmers receive short term credit at 7% with an upper
+                        limit of Rs. 3.00 lakh on the principal amount. The policy came into force with effect from
+                        Kharif 2006-07. The amount of subvention was to be calculated on the amount of crop loan from
+                        the date of disbursement up to the actual date of repayment of the crop loan by the farmer or up
+                        to the due date of the loan fixed by the banks, whichever is earlier, subject to a maximum
+                        period of one year.</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>In pursuance of this announcement, the Government of India provided interest subvention of 2%
+                        to Public Sector Banks, Regional Rural Banks (RRBs) and Cooperative Banks in respect of short
+                        term production credit up to Rs. 3.00 lakh provided to farmers out of their own resources,
+                        provided that they make available short term credit @ 7% p.a. at ground level. Private Sector
+                        Banks (in respect of loans given by their rural and semi urban branches) are also covered under
+                        the scheme from the year 2013-14 with similar terms and conditions.</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>The scheme, introduced in 2006-07, has continued in the following years with certain
+                        modifications and changes in rate of subvention. Year-wise rate of interest subvention made
+                        available to the banks on their own funds was as under:</div>
+                    <div>&nbsp;</div>
+                    <div>2007-08 - 2%&nbsp;</div>
+                    <div>2008-09 - 2%</div>
+                    <div>2009-10 - 2%</div>
+                    <div>2010-11 - 1.5%</div>
+                    <div>2011-12 - 2%</div>
+                    <div>2012-13 - 2%</div>
+                    <div>2013-14 - 2%</div>
+                    <div>2014-15 - 2%&nbsp;</div>
+                    <div>2015-16 - 2%</div>
+                    <div>2016-17 - 2%</div>
+                    <div>2017-18- 2%</div>
+                    <div>2018-19 – 2%</div>
+                    <div>2019-20 – 2%</div>
+                    <div>&nbsp;</div>
+                    <div><strong style="color: #008000;">•<span style="white-space:pre"> </span>Incentive to farmers on
+                            prompt repayments&nbsp; &nbsp;</strong></div>
+                    <div>&nbsp;</div>
+                    <div>Since the year 2009-10, Government of India introduced additional incentive for farmers who
+                        promptly repay the loans on or before the due date or the date fixed by the bank, subject to a
+                        maximum period of one year. Year-wise rate of incentive to prompt-paying farmers was as under:
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>2009-10 - 1%</div>
+                    <div>2010-11 - 2%</div>
+                    <div>2011-12 - 3%</div>
+                    <div>2012-13 - 3%&nbsp;</div>
+                    <div>2013-14 - 3%</div>
+                    <div>2014-15 - 3%</div>
+                    <div>2015-16 - 3%</div>
+                    <div>2016-17 - 3%</div>
+                    <div>2017-18- 3%</div>
+                    <div>2018-19 - 3%</div>
+                    <div>2019-20 - 3%</div>
+                    <div>&nbsp;</div>
+                    <div><strong style="color: #008000;">•<span style="white-space:pre"> </span>Relief to
+                            farmers</strong></div>
+                    <div>&nbsp;</div>
+                    <div>To provide relief to farmers affected by natural calamities, Interest Subvention of 2% has been
+                        made available to banks for the first year on restructured amount of crop loans.&nbsp; Such
+                        restructured loans will attract normal rate of interest from the second year onwards as per the
+                        policy laid down by the RBI.</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div><strong style="color: #008000;">•<span style="white-space:pre"> </span>Interest Subvention to
+                            Small and Marginal Farmers against Negotiable Warehouse Receipts&nbsp;&nbsp;</strong></div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>In order to discourage distress sale of produce by farmers and to encourage them to store their
+                        produce in warehouses against warehouse receipts, GoI had introduced a scheme in 2011-12 for
+                        extending concessional loans to the farmers against negotiable warehouse receipts.</div>
+                    <div>&nbsp;</div>
+                    <div>The benefit of 2% interest subvention will be available to banks on their own funds involved
+                        for extending credit support up to Rs 3.00 lakh at 7% interest per annum to Small and Marginal
+                        farmers (SF/MF) having Kisan Credit Card for a further period of up to six months post the
+                        harvest of the crop against Negotiable Warehouse Receipts issued on the produce stored in
+                        warehouses accredited with Warehousing Development Regulatory Authority.</div>
+                    <div>SF/MF, who have not availed crop loans through banking system, would not be eligible.</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div><strong style="color: #008000;">Interest subvention on working capital to Animal Husbandry and
+                            Fisheries</strong></div>
+                    <div>&nbsp;</div>
+                    <div>GoI has extended the Interest subvention Scheme on KCC issued to crop loan farmers to the KCC
+                        issued to Animal Husbandry and Fisheries farmers from 2018-19. Interest subvention of 2% to
+                        banks and 3% to farmers towards Prompt Repayment incentive is extended on short term loans up to
+                        Rs.2 lakh to animal husbandry and fisheries farmers apart from the existing KCC for crop loans,
+                        provided the loans are extended by banks @7% per annum.&nbsp; In case of farmers possessing KCC
+                        for raising crops and involved in activities related to Animal Husbandry and/ or Fisheries, the
+                        Interest Subvention on short term loan is available on an overall limit of Rs.3 lakh per annum.
+                    </div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div><span style="color: #008000;"><strong>Withdrawal of Interest subvention on other than KCC
+                                accounts&nbsp;&nbsp;</strong></span></div>
+                    <div>&nbsp;</div>
+                    <div>Govt. of India has issued instruction that Interest Subvention to Banks and Prompt Repayment
+                        Incentive to farmers will be available only against KCCs from 01.04.2020.</div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="set">
+            <a href="#accContainer">
+                Agriclinic and Agribusiness Centres Scheme
+                <i class="fa fa-plus"></i>
+            </a>
+            <div class="content">
+                <div>
+                    <div style="text-align: justify;">
+                    <div>
+                    <div>The ACABC scheme is being implemented by Ministry of Agriculture and Farmers’ Welfare, Government of India, with NABARD acting as subsidy channelizing agency.</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div>The Objectives of the scheme are –</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div>
+                    <ul>
+                         <li>To supplement efforts of public extension by necessarily providing extension and other services to the farmers on payment basis or free of cost as per business model of agri-preneur, local needs and affordability of target group of farmers;&nbsp;</li>
+                         <li>To support agricultural development; and&nbsp;</li>
+                         <li>To create gainful self-employment opportunities to unemployed agricultural graduates, agricultural diploma holders, intermediate in agriculture and biological science graduates with PG in agri-related courses.&nbsp;</li>
+                    </ul>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div><strong style="color: #008000;">Agri-Clinics</strong></div>
+                    <div>&nbsp;</div>
+                    <div>Agri-Clinics are envisaged to provide expert advice and services to farmers on various aspects to enhance productivity of crops/animals and increase the incomes of farmers. Agri-Clinics provide support in the following areas:</div>
+                    <div>&nbsp;</div>
+                    <div>
+                    <ul>
+                         <li>Soil health</li>
+                         <li>Cropping practices</li>
+                         <li>Plant protection</li>
+                         <li>Crop insurance</li>
+                         <li>Post-harvest technology</li>
+                         <li>Clinical services for animals, feed and fodder management</li>
+                         <li>Prices of various crops in the market, etc.&nbsp;</li>
+                    </ul>
+                    </div>
+                    <div><strong style="color: #008000;">Agri-Business Centres</strong></div>
+                    <div>&nbsp;</div>
+                    <div>Agri-Business Centres are commercial units of agri-ventures established by trained agriculture professionals. Such ventures may include maintenance and custom hiring of farm equipment, sale of inputs and other services in agriculture and allied areas, including post-harvest management and market linkages for income generation and entrepreneurship development.&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>The scheme covers full financial support for training and handholding, provision of loan and credit-linked back ended composite subsidy.&nbsp;</div>
+                    <div><strong style="color: #008000;">&nbsp;</strong></div>
+                    <div></div>
+                    <div><strong style="color: #008000;">Who can benefit from the scheme?&nbsp;</strong></div>
+                    <div>&nbsp;</div>
+                    <div>The scheme is open to the following categories of candidates:&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>
+                    <ul>
+                         <li>Graduates in agriculture and allied subjects from State Agriculture Universities (SAUs)/Central Agricultural Universities/Universities recognized by ICAR/UGC. Degree in Agriculture and allied subjects offered by other agencies are also considered subject to approval of Department of Agriculture &amp; Cooperation, GoI, on recommendation of the State Government</li>
+                         <li>Diploma (with at least 50% marks)/Post Graduate Diploma holders in Agriculture and allied subjects from State Agricultural Universities, State Agriculture and Allied Departments and State Department of Technical Education.</li>
+                         <li>Diploma in Agriculture and allied subjects offered by other agencies are also considered subject to approval of Department of Agriculture, Cooperation &amp; Farmers’ Welfare, GoI on recommendation of the State Government</li>
+                         <li>Biological Science Graduates with Post Graduation in Agriculture &amp; allied subjects</li>
+                         <li>Degree courses recognised by UGC having more than 60 percent of the course content in Agriculture and allied subjects</li>
+                         <li>Diploma/Post Graduate Diploma courses with more than 60 percent of course content in Agriculture and allied subjects, after B.Sc. with Biological Sciences, from recognised colleges and universities.</li>
+                         <li>Agriculture related courses at Intermediate (i.e. plus two) level, with at least 55% marks.</li>
+                    </ul>
+                    </div>
+                    <div></div>
+                    </div>
+                    <div>
+                    <ul>
+                    </ul>
+                    </div>
+                    <div></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="set">
+            <a href="#accContainer">
+                Formulation of Special Refinance Schemes
+                <i class="fa fa-plus"></i>
+            </a>
+            <div class="content">
+                <div class="CNT-bullet"> <span id="ContentPlaceHolder1_lbldescription"><div style="text-align: justify;">
+                    <div>To address the issue of rural migration and to give boost to the agriculture and rural sector in the post COVID era, NABARD introduced three special refinance schemes as detailed under.</div><div>&nbsp;</div><div><strong style="color: #008000;">&nbsp;1 Special Long Term Refinance Scheme for Transformation of PACSs as MSC</strong></div><div>&nbsp;</div>
+                    
+                    <div></div>
+                    <div>The scheme intends to develop all the potential PACS as Multi Service Centres (MSCs) over a period of three years commencing from the year 2020-by providing concessional refinance to StCBs at 3% to support PACS to create quality infrastructure (capital assets) and increase their business portfolio in tune with needs of members. Under this line of credit, NABARD has envisaged transformation of 35,000 PACS in three years commencing with the transformation of 5,000 PACS in FY21 and for subsequent years 15,000 PACS each during FY22 and FY23. Rs.5000 crore have been earmarked under this special dispensation for the year 2020-21. The ultimate interest rate to be charged from PACS will not be more than 1% over &amp; above the interest rate charged by NABARD and will be shared by StCB &amp; CCB as per the mutually agreed terms. Repayment period of refinance will be up to 7 years.</div>
+                    <div></div>
+                    <div>So far, 3055 PACS were given in-principle sanction with estimated project cost of Rs.1760.82 cr and estimated bank loan of Rs.1568 cr. by NABARD.</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div><strong style="color: #008000;">2 Special Long Term Refinance Scheme for beneficiaries of the watershed and wadi project areas</strong></div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div>The objectives of the scheme is&nbsp; to promote sustainable economic activities, livelihood and employment opportunities for the beneficiaries in NABARD supported watershed and wadi project areas by encouraging banks to lend at concessional rate to these beneficiaries to address the issue of rural migration and to give boost to the agriculture and rural sector in the post COVID era.</div>
+                    <div></div>
+                    <div>The refinance will be available to all the eligible banks/FIs at 3% for maximum 5 years. The revised&nbsp; ultimate lending rate to be charged by banks/FIs under the scheme is revise as 06 months MCLR+1% or EBLR+2.5% whichever is lower. NABARD has earmarked refinance amount of Rs.5000 crore during 2020-21 to 2022-23.</div>
+                    <div></div>
+                    <div>Regional offices of NABARD are finalizing the Banking Plans in collaboration with the participating Banks.</div>
+                    <div>&nbsp;</div>
+                    <div></div>
+                    <div><strong style="color: #008000;">Download Links :</strong></div>
+                    <div>&nbsp;</div>
+                    <div><ul><li><a href="https://www.nabard.org/auth/writereaddata/tender/cir no. 199.pdf" target="_blank"><span style="font-family: Georgia; font-size: 10pt;">https://www.nabard.org/auth/writereaddata/tender/cir no. 199.pdf</span></a></li><li><a href="https://www.nabard.org/auth/writereaddata/tender/1709200741Cir_244_E.pdf" target="_blank" style="text-align: justify;"><span style="font-size: 10pt; line-height: 115%; font-family: Georgia;">https://www.nabard.org/auth/writereaddata/tender/1709200741Cir_244_E.pdf</span></a><span style="text-align: justify;">&nbsp;</span></li></ul></div>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div style="text-align: justify; "><strong style="color: #008000;">3&nbsp; Special Long Term Refinance Scheme for promoting Micro Food Processing Activities.</strong></div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div></div>
+                    <div style="text-align: justify; ">The objectives of the scheme is to encourage banks to lend micro-food processing activities and create sustainable livelihood and employment opportunities for rural youth as well as reverse migrants due to COVID-19 pandemic in the rural areas.</div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div></div>
+                    <div style="text-align: justify; ">The scheme also envisages modernization and enhancing the competitiveness of the existing individual micro enterprises and ensure their transition to formal sector in rural areas. The refinance scheme will give fillip to the recently launched “PM Scheme for Formalisation of Micro food processing Enterprises (PM FME)” under Aatmanirbhar Bharat Abhiyan by MoFPI, GoI under which about Rs.25,000 crore investment is expected in the sector. The concessional refinance at 4% is available to eligible financial institutions viz., commercial banks, SFBs, StCBs, RRBs and NABARD subsidiaries.</div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div style="text-align: justify; "><strong style="color: #008000;">Download Link:</strong></div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div><ul><li><a href="https://www.nabard.org/auth/writereaddata/tender/1709201406Cir_251_E.pdf" style="text-align: justify;" target="_blank"><span style="font-size: 10pt; line-height: 107%; font-family: Georgia;">https://www.nabard.org/auth/writereaddata/tender/1709201406Cir_251_E.pdf</span></a>&nbsp;</li></ul></div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div style="text-align: justify; "><strong><span style="color: #008000;">4.</span><span style="white-space: pre;">	</span><span style="color: #008000;">‘Structured Finance and Partial Guarantee Programme to NBFC-MFIs,’</span></strong></div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div style="text-align: justify; ">The National Bank for Agriculture and Rural Development (NABARD) has introduced a dedicated debt and credit guarantee product to ensure unhindered flow of credit in rural areas hit by the Covid-19 pandemic. The product- Structured Finance and Partial Guarantee Programme to NBFC-MFIs -entails providing partial guarantee on pooled loans extended to small and mid-sized micro finance institutions (MFIs). “The partially guaranteed loan facility will catalyse much-needed financing to millions of households, agricultural and business markets to sustain in the post Covid-19 environment.&nbsp;</div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div style="text-align: justify; ">It will help facilitate Rs 2,500 crore funding in the initial phase and is expected to be scaled up. The programme is expected to cover over 1 million households across 28 states and 650 districts, the release said. The pooled loan issuance (PLI) structure provides the lending bank adequate comfort through NABARD’s partial credit protection, reduces cost of capital as the rating of the loans gets notched up and helps lenders meet priority sector goals. This structure will pool together the risk of multiple borrowers and add a layer of partial first loss credit enhancement from a highly rated guarantor.</div>
+                    <div style="text-align: justify; ">&nbsp;</div>
+                    <div>&nbsp;</div></span></div>
+            </div>
+        </div>
+    </div>
+    <footr>
+        <div class="footer top_layer ">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="address">
+                            <a href="index.html"> <img src="images/brand.png" alt="logo" /></a>
+                            <p> </p>
+                        </div>
+                    </div>
+                   
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="address">
+                            <h3>Subcribe email</h3>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p> -->
+                            <input class="form-control" placeholder="Your Email" type="type" name="Your Email">
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12">
+                        <div class="address">
+                            <h3>Contact Us</h3>
+
+                            <ul class="loca">
+                                <li>
+                                    <a href="#"><img src="icon/loc.png" alt="#" /></a>Punjab
+                                </li>
+                                <li>
+                                    <a href="#"><img src="icon/email.png" alt="#" /></a>kisanseva@gmail.com </li>
+                                <li>
+                                    <a href="#"><img src="icon/call.png" alt="#" /></a>+91 8004012228 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
